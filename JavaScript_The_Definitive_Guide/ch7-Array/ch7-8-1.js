@@ -1,6 +1,6 @@
 // 陣列方法 迭代器方法(iterable)
 
-// forEach()
+// forEach(): 為每個元素調用所指定的函式
 // 計算總和
 let data = [1, 2, 3, 4, 5],
   sum = 0;
@@ -14,16 +14,15 @@ data.forEach(function(v, i, a) {
 });
 console.log(data);
 
-// map() 迭代
+// map(): 被調用的陣列的每個元素傳入指定的函式
 let a = [1, 2, 3];
 console.log(a.map(x => x * x));
 console.log(a);
 
-// filter() 迭代並篩選符合條件的元素
+// filter():回傳陣列並篩選符合條件的元素
 let a2 = [5, 4, 3, 2, 1];
 console.log(a2.filter(x => x < 3));
 console.log(a2.filter((x, i) => i % 2 === 0));
-
 // let dense = sparse.filter(() => true);
 a2 = a2.filter(x => x !== undefined && x !== null);
 console.log(a2);
