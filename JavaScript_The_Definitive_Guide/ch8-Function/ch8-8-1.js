@@ -1,5 +1,9 @@
 // 以函式處理陣列
 
+// functional版本的map()和reduce()方法
+const map = function (a, ...args) { return a.map(...args); };
+const reduce = function (a, ...args) { return a.reduce(...args); };
+
 // 以不是function風格 計算平均值與標準差
 let data = [1, 2, 3, 5, 5];
 
