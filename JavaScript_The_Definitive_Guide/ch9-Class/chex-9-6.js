@@ -1,3 +1,5 @@
+// typemap.js
+
 /**
  * TypedMap 會檢查間值與值之型別的一個Map的子類別
  */

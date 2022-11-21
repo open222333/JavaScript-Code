@@ -1,3 +1,4 @@
+// span.js
 // 子類別與原型
 // 一個簡單的Range子類別
 class Range {
