@@ -1,4 +1,4 @@
-// Node的匯出
+// Node的匯入
 
 /**
  * 若要匯入Node內建的模組或透過套件管理器(package manager)安裝的模組，
@@ -6,7 +6,7 @@
  * 不使用會把它變成一個檔案系統路徑的任何 / 字元。
  */
 // 這些模組內建於Node
-const fs = require("fs"); // 內建的檔案系統模組
+const fs = require("fs"); // 內建的檔案系統模組∏
 const http = require("http"); // 內建的HTTP模組
 
 // express http 伺服器框架是一個第三方模組，需安裝
