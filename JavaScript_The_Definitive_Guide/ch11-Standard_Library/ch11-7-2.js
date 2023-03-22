@@ -1,4 +1,7 @@
 /**
+ * DateTimeFormat
+ * 格式化日期與時間
+ *
  * year: 四位數年 "numeric"，二位數縮寫 "2-digit"
  * month: 數字 "numeric"，呈現二位數 "2-digit"，完整名稱 "long"，縮寫名稱 "short"，不保證唯一的高度縮寫 "narrow"
  * day: 數字 "numeric"，呈現二位數 "2-digit"

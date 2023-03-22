@@ -1,5 +1,7 @@
-// Intl.NumberFormat (格式化數字)
 /**
+ * Intl.NumberFormat
+ * 格式化數字
+ *
  * stytle: 數字格式類型，預設 "decimal"，百分比 "percent"，金額 "currency"
  * currency: 如果 stytle 是 "currency"，則此特性為必要。ISO貨幣碼 USD(美元),GBP(英鎊)
  * currencyDisplay: 如果 stytle 是 "currency"，貨幣如何顯示，預設值: 貨幣符號 "symbol"。使用ISO碼 "code", 貨幣名稱 "name"
