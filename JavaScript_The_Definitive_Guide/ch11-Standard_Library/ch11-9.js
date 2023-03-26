@@ -92,6 +92,6 @@ params.append("q", "term");
 params.append("opts", "exact");
 params.toString(); // => q=term&opts=exact
 console.log(params.toString());
-params2url.search = params;
+params2url.search = params;ㄎ
 params2url.href; // => http://example.com/?q=term&opts=exact
 console.log(params2url.href);
