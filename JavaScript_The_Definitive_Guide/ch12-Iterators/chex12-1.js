@@ -47,6 +47,11 @@ class Range {
       },
     };
   }
+
+  // 範例12-1所展示的[Symbol.iterator]()
+  *[Symbol.iterator]() {
+    for (let x = Math.ceil(this.from); x <= this.to; x++) yield x;
+  }
 }
 
 // 紀錄1到10數字
@@ -100,3 +105,31 @@ function filter(iterable, predicate) {
 // 過濾一個範圍，只留下偶數
 [...filter(new Range(1, 10), (x) => x % 2 === 0)]; // => [ 2, 4, 6, 8, 10 ]
 console.log([...filter(new Range(1, 10), (x) => x % 2 === 0)]);
+
+// 若有大型字串，若要單詞化，須先處理字串
+function words(s) {
+  let r = /\s+|$/g; // 匹配一個或多個空格或結尾
+  r.lastIndex = s.match(/[^ ]/).index; // 在第一個非空格開始匹配
+  return {
+    // 回傳一個可迭代的迭代器物件
+    [Symbol.iterator]() {
+      return this;
+    },
+    next() {
+      // 使其成為一個迭代器
+      let start = r.lastIndex; // 從上次匹配結束之處重新開始
+      if (start < s.length) {
+        // 若尚未完成
+        let match = r.exec(s); // 匹配下一個字詞邊界
+        if (match) {
+          // 若到一個就回傳該字詞
+          return {value: s.substring(start, match.index)};
+        }
+      }
+      return {done: true};
+    },
+  };
+}
+
+[...words(" abc def ghi! ")]; // => [ 'abc', 'def', 'ghi!' ]
+console.log([...words(" abc def ghi! ")]);
