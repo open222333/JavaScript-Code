@@ -1,6 +1,8 @@
 // 網路事件
 /**
  * 網路請求(network requests)
+ *
+ * XMLHttpRequest類別 在目前(2023)已大多被fetch() API 取代
  */
 
 function getCurrentVersionNumber(versionCallback) {
