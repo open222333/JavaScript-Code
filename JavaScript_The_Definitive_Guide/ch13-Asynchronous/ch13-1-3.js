@@ -10,7 +10,7 @@ function getCurrentVersionNumber(versionCallback) {
   let request = new XMLHttpRequest();
   request.open("GET", "http://www.example.com/api/version");
   request.send();
-
+     
   // 註冊一個會再回應(response)抵達時被調用的callback
   request.onload = function () {
     if (request.status === 200) {
