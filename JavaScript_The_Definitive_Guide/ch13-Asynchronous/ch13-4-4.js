@@ -1,6 +1,29 @@
 // 實作非同步迭代器
 
 /**
+ * 這段程式碼實現了一個非同步迭代器 clock 和一個非同步佇列 AsyncQueue，以及一個用於處理按鍵事件的示例 handleKeys。
+ * 
+ * 非同步迭代器 clock:
+ * clock 函式接受兩個參數，interval 表示迭代的時間間隔，max 表示最大迭代次數（預設為 Infinity）。
+ * 使用 Promise 實現非同步操作，並提供 next 方法作為非同步迭代器的 next 方法。
+ * until 函式返回一個 Promise，等候到指定的絕對時間。
+ *
+ * 非同步佇列 AsyncQueue:
+ * 用於處理值的佇列，支援異步操作。
+ * 包含 enqueue 方法用於新增值，dequeue 方法用於移除值，close 方法用於關閉佇列。
+ * 使用 Promise 解析方式處理佇列中的值。
+ *
+ * 事件串流 eventStream:
+ * 接受一個 DOM 元素 elt 和事件類型 type，返回一個將事件推送到佇列的 AsyncQueue。
+ *
+ * 處理按鍵事件 handleKeys:
+ * 使用 eventStream 創建一個按鍵事件的串流。
+ * 使用 for await 迴圈非同步迭代串流中的事件，並印出按下的按鍵。
+ *
+ * 整體來說，這些程式碼組合了非同步迭代器、非同步佇列和事件串流，以實現異步的事件處理和值的管理。
+ */
+
+/**
  * clock()函式
  *
  * @param {*} interval
